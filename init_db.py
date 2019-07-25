@@ -1,7 +1,8 @@
-from bs4 import BeautifulSoup
 import requests
-from app import db, app
-from app.models import Movie, Actor
+from bs4 import BeautifulSoup
+
+from app import app, db
+from app.models import Actor, Movie
 
 BASE_URL = 'https://www.csfd.cz'
 MOVIES_URL = BASE_URL + '/zebricky/nejlepsi-filmy/?show=complete'
