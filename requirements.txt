@@ -1,0 +1,6 @@
+beautifulsoup4
+flask
+flask_migrate
+flask_sqlalchemy
+lxml
+requests

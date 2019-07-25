@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Imper</title>
+</head>
+
+<body>
+    <form method="POST">
+        {% if query %}
+        <input name="query" value="{{ query }}">
+        {% else %}
+        <input name="query" placeholder="input...">
+        {% endif %}
+        <input type="submit">
+    </form>
+    <div style="display: grid; grid-template-columns: 1fr 1fr;">
+        {% if movies is not none %}
+        <div>
+            <h2>Filmy</h2>
+            <ul>
+                {% for movie in movies %}
+                <li><a href="/movie/{{ movie.id }}">{{ movie.name }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+        {% if actors is not none %}
+        <div>
+            <h2>Herci</h2>
+            <ul>
+                {% for actor in actors %}
+                <li><a href="/actor/{{ actor.id }}">{{ actor.name }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+    </div>
+</body>
+
+</html>

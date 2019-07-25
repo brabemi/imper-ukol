@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>{{ actor.name }}</title>
+</head>
+
+<body>
+    <h1>{{ actor.name }}</h1>
+    <h2>Filmy</h2>
+    <ul>
+        {% for movie in actor.movies %}
+        <li><a href="/movie/{{ movie.id }}">{{ movie.name }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>
